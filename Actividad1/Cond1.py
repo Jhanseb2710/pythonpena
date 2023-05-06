@@ -2,7 +2,7 @@ x=int(input('ingrese numero: ')) #int almacena un valor numerico no decimal sea 
 y=int(input('ingrese numero: '))
 z=int(input('ingrese numero: '))
 #indentación
-if x>y: #If ejecuta el codigo cuando se cumple una condicion
+if x>y: #ejecuta el codigo cuando se cumple una condicion
     if x>z:
         print(f'el mayor es: {x}')
     else: #Else solo se utiliza si no se cumple con la condicion de If
