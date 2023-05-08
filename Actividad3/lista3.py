@@ -1,8 +1,9 @@
-cant = 15
-num = []
-print(f"Ingrese {cant} de numeros ")
-for i in range (cant):
-    num = input(f"Ingrese un numero {i+1}: ")
-    print(f"El numero que se ingreso fue el: {num}")
-    print (f"El numero {num} es nuevo")
-    print (f"El numero {num} ya se encuentra en el arreglo")
+import random
+num = [random.randint(0, 15)]
+i = 1
+while i < 15:
+    e = random.randint (0, 15)
+    if e not in num:
+        num.append(e)
+        i+=1
+print (num)
