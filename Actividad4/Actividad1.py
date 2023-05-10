@@ -16,6 +16,20 @@ def sumaLista(lista):
 def promedioLista(lista):
     return sumaLista(lista)/len(lista)
 
+def mayorLista(lista):
+    max=lista[0];
+    for x in lista:
+        if x > max:
+            max=x
+    return max
+
+def menorLista(lista):
+    min=lista[0];
+    for x in lista:
+        if x < min:
+            min=x
+    return min
+
 from statistics import mode
 def mediana (lista):
     media = len (lista) // 2
@@ -28,6 +42,8 @@ l1=llenarLista(5,20)
 print(l1)
 print("La suma de la lista es: ", sumaLista(l1))
 print("El promedio de la lista es: ", promedioLista(l1))
+print("El mayor de la lista es: ", max(l1))
+print("El menor de la lista es: ", min(l1))
 print("La  moda es: ", mode(l1))
 print("La medana es: ", mediana(l1))
 
