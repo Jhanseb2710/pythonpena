@@ -30,6 +30,16 @@ def menorLista(lista):
             min=x
     return min
 
+def ordenar(lista):
+    lista.sort()
+    for lista in lista:
+        print (lista)
+        
+def descender(lista):
+    lista.sort(reverse=True)
+    for lista in lista:
+        print (lista)
+
 from statistics import mode
 def mediana (lista):
     media = len (lista) // 2
@@ -44,8 +54,7 @@ print("La suma de la lista es: ", sumaLista(l1))
 print("El promedio de la lista es: ", promedioLista(l1))
 print("El mayor de la lista es: ", max(l1))
 print("El menor de la lista es: ", min(l1))
+print("El orden ascendente de la lista es: ", ordenar(l1))
+print("El orden descendente de la lista es: ", descender(l1))
 print("La  moda es: ", mode(l1))
 print("La medana es: ", mediana(l1))
-
-
-
