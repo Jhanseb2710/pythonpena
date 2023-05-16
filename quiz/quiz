@@ -1,0 +1,80 @@
+import random
+def llenarLista(tam,rango):
+    lista=[]
+    lista=[random.randrange(rango) for i in range(tam)]
+    return lista
+
+def sumaLista(lista):
+    sum=0
+    for x in lista:
+        sum+=x
+    return sum
+
+def mayorLista(lista):
+    may=lista[0];
+    for x in lista:
+        if x > may:
+            may=x
+    return may
+def menorLista(lista):
+    men=lista[0];
+    for x in lista:
+        if x < men:
+            men=x
+    return men
+def promedioLista(lista):
+    return sumaLista(lista)/len(lista)
+
+def llenarLista2(tam,rango):
+    lista=[]
+    lista=[random.randrange(rango) for i in range(tam)]
+    return lista
+def sumaLista2(lista):
+    sum=0
+    for x in lista:
+        sum+=x
+    return sum
+def mayorLista2(lista):
+    may=lista[0];
+    for x in lista:
+        if x > may:
+            may=x
+    return may
+def menorLista2(lista):
+    men=lista[0];
+    for x in lista:
+        if x < men:
+            men=x
+    return men
+def promedioLista2(lista):
+    return sumaLista2(lista)/len(lista)
+
+def promedioGeneral(l1,l2):
+    return (sumaLista(l1)+sumaLista2(l2))/(len(l1)+len(l2))
+
+
+l1=llenarLista(5,30)
+l2=llenarLista2(5,30)
+print(l1)
+print(l2)
+print("La suma de la lista 1 es: ", sumaLista(l1))
+print("La suma de la lista 2 es: ", sumaLista2(l2))
+if l1 > l2:
+    print("La suma1 es mayor que suma2")
+else:
+    print("La suma2 es mayor que suma1")
+print("El mayor de la lista 1 es: ", mayorLista(l1))
+print("El mayor de la lista 2 es: ", mayorLista2(l2))
+if l1 > l2:
+    print("El mayor de la lista 1 es mayor al de la lista 2")
+else:
+    print("El mayor de la lista 2 es mayor al de la lista 1")
+print("El menor de la lista 1 es: ", menorLista(l1))
+print("El menor de la lista 2 es: ", menorLista2(l2))
+if l1 < l2:
+    print("El menor de la lista 1 es menor al de la lista 2")
+else:
+    print("El menor de la lista 2 es menor al de la lista 1")
+print("El promedio general es: ", promedioGeneral(l1,l2))
+print("El promedio de la lista 1 es: ", promedioLista(l1))
+print("El promedio de la lista 2 es: ", promedioLista2(l2))
