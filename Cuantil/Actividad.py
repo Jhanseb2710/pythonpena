@@ -56,8 +56,28 @@ def hallarX(lista1, lista2):
             total.append(res)          
     return(total)
 
+def posicionCuartil0 (lista,q):
+    promedio=0
+    n=q-int(q)
+    q=int(q)
+    print(n)
+    print(q)
+    if n>0:
+        print(lista[q-1])
+        print(lista[q])
+        promedio=((lista[q-1]+lista[q]/2))
+    else:
+        promedio=lista[q-1]
+    
+    print("Promedio: ", promedio)
+    return promedio
+
+
 l1=llenarLista((10),(20),(0),(100))
 print(ordenAscendente(l1))
+pox=cuartilLista(l1)
+print(pox[0])
+print(posicionCuartil0(l1,pox[0]))
 print('cuartiles',cuartilLista(l1))
 print('quintiles',quintilLista(l1))
 print('promedio cuartiles',promedioLista(cuartilLista(l1)))
