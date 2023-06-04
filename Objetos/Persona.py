@@ -13,8 +13,11 @@ class Persona:
         self.__documento=documento
     def getDatos(self):
         return self.__nombre, self.__documento
+    def getCursos(self):
+        return self.__cursos
     def setCursos(self,cursos):
         self.__cursos=cursos
+        x=int(input"Escriba cursos: ")
 p=Persona("Andres",315)
 q=Persona("Andrea",412)
 print(p.getNombre())
@@ -22,4 +25,4 @@ print(p.getDocumento())
 print(q.getNombre())
 print(q.getDocumento())
 print(p.getDatos(), q.getDatos())
-p.setCursos()
+print(p.getCursos())
