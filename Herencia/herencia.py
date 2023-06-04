@@ -11,6 +11,9 @@ class jugador1 (equipo):
 class jugador2 (equipo):
     def rendimiento(self,rendimiento):
         return "{} su rendimiento en el partido fue de {}".format(self.nombre,rendimiento) 
-nuevo_jugador= jugador1 ("Kevin Mier", "arquero")
-print(nuevo_jugador.descripcion())
-print(nuevo_jugador.rendimiento("9.6"))
+nuevo_jugador1= jugador1 ("Kevin Mier", "arquero")
+nuevo_jugador2= jugador2 ("Dorlan Pabon", "mediocampista")
+print(nuevo_jugador1.descripcion())
+print(nuevo_jugador1.rendimiento("9.6"))
+print(nuevo_jugador2.descripcion())
+print(nuevo_jugador2.rendimiento("8.8"))
