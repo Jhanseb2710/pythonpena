@@ -1,11 +1,12 @@
 class Empleado:
-    def __init__(self, nombre, cargo, salario,incremento, extra):
+    def __init__(self, nombre, cargo,extra, salario,incremento):
         self.__nombre= nombre
         self.__cargo= cargo
+        self.__extra=extra
         self.__salario= salario
         self.__incremento= incremento
-        self.__extra= extra
         
+
     def getNombre(self):
         return self.__nombre
     def setNombre(self, nombre):
@@ -15,6 +16,15 @@ class Empleado:
         return self.__cargo
     def setCargo(self, cargo):
         self.__cargo=cargo
+    
+    def getExtra(self):
+        return self.__extra
+    def setExtra(self, extra):
+        if extra <= 40:
+            x=extra*4833
+            self.__salario= self.__salario+ x
+        else:
+            return self.__salario
     
     def getSalario(self):
         return self.__salario
@@ -30,21 +40,11 @@ class Empleado:
         else:
             self.__salario + 0.1312
             return self.__incremento
-            
-    def getExtra(self):
-        return self.__extra
-    def setExtra(self, extra):
-        self.__extra=extra
-        if extra <= 40:
-            x=extra*4833
-            self.__salario+ x
-        else:
-            return self.__salario
                     
-p=Empleado ("Jhan", "Ingenierio", 1160000, 1160000, 30)
+p=Empleado ("Jhan", "Ingenierio", 30, 1160000, 1160000)
 #q= Empleado ("Michell", "Contadora")
 print(p.getNombre())
 print(p.getCargo())
+print(p.getExtra())
 print(p.getSalario())
 print(p.getIncremento())
-print(p.getExtra())
