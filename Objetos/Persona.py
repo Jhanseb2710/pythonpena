@@ -1,4 +1,5 @@
 class Persona:
+    listaCursos=[]
     def __init__(self,nombre,documento):
         self.__nombre=nombre
         self.__documento=documento
@@ -13,8 +14,13 @@ class Persona:
         self.__documento=documento
     def getDatos(self):
         return self.__nombre, self.__documento
+    def addCursos(self,cursos):
+        self.__cursos += [cursos]
+    def getCursos(self):
+        return self.__cursos
     def setCursos(self,cursos):
-        self.__cursos+=[cursos]
+        self.__cursos=cursos
+    
 p=Persona("Andres",315)
 q=Persona("Andrea",412)
 print(p.getNombre())
@@ -22,4 +28,4 @@ print(p.getDocumento())
 print(q.getNombre())
 print(q.getDocumento())
 print(p.getDatos(), q.getDatos())
-p.setCursos([])
+print(p.getCursos([]))
