@@ -42,7 +42,6 @@ class Empleado:
             return self.__incremento
                     
 p=Empleado ("Jhan", "Ingenierio", 30, 1160000, 1160000)
-#q= Empleado ("Michell", "Contadora")
 print(p.getNombre())
 print(p.getCargo())
 print(p.getExtra())
