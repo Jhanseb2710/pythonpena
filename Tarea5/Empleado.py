@@ -36,7 +36,8 @@ class Empleado:
     def setExtra(self, extra):
         self.__extra=extra
         if extra <= 40:
-            self.__salario+(extra*4833)
+            x=extra*4833
+            self.__salario+ x
         else:
             return self.__salario
                     
