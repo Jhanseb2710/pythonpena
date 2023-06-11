@@ -1,11 +1,12 @@
 from Cliente import *
-
+from Productos import *
 class Empresa(Cliente):
-    def __init__(self,nombre,telefono,fax, precio):
+    def __init__(self,nombre,telefono,fax):
+        super().__init__(nombre,telefono)
         self.__nombre = nombre
         self.__telefono = telefono
         self.__fax = fax
-        self.__precio = precio
+        self.__productos = []
         
     def getDatos(self):
         return f"{self.__nombre},{self.__telefono},{self.__fax}"
