@@ -14,7 +14,7 @@ class Individual(Cliente):
         #self.__precio= precio
         
     def getDatos(self):
-        return f"{self.__id},{self.__nombre},{self.__tipo},{self.__descripcion},{self.__email},{self.__telefono}" 
+        return f"{self.__id},{self.__nombre},{self.__tipo},{self.__descripcion},{self.__email},{self.__telefono},{self.__direccion}" 
     
     def setId (self,id):
         self.__id = id
@@ -29,9 +29,9 @@ class Individual(Cliente):
 
     def descuentoProducto (self,precio):
         self.__precio = precio
-        descuento = self.__precio * 0.03
-        self.__precio = self.__precio - descuento
-        return f"El precio con descuento para un individual es: {self.__precio} "
+        descuento = self.__precio * 0.35
+        precio = self.__precio - descuento
+        return f"El precio con descuento para un individual es: {precio} "
     
     def getProductosList(self):
         return self.__productos
