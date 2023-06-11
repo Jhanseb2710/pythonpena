@@ -47,7 +47,7 @@ for i in persona3.getProductosList():
     print (f"Instanciado de Individual {i.getProducto()}")
 print(persona3.descuentoProducto(1300))
 
-empresa = Empresa("laindustria",345789632, 5465)
+empresa = Empresa("laindustria", 345789632, 5465)
 
 print(empresa.getDatos())
 print(isinstance(empresa,Empresa))
