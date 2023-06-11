@@ -1,6 +1,7 @@
 from Cliente import *
 from Productos import *
 from Individual import *
+from Empresa import *
 
 # Se instancian objetos de la clase Cliente
 persona = Cliente(10,"Normal","individual","hola")
@@ -28,7 +29,6 @@ print(ob2.getProducto())
 persona.agregarProducto(ob1)
 persona.agregarProducto(ob2)
 
-
 for producto in persona.getProductos():
     print (f"AGREGACION {producto.getProducto()}")
 
@@ -37,17 +37,22 @@ persona2.componerProducto(3,"Arroz","Grano","Grasas",2000)
 for producto in persona2.getProductos():
     print (f"COMPOSICION {producto.getProducto()}")
 
+persona3 = Individual(27,"Jhan","Individual","empresario","jhsbtian962016@gmail.com", 3133033390, "xra2" )
 
 print(persona3.getDatos())
 print(isinstance(persona3,Individual))
-producto = Producto (4, "Agua", "Bebida", "Lite", 1500)
+producto = Producto(4, "Agua", "Bebida", "Lite", 1300)
 persona3.agregarProducto(producto)
 for i in persona3.getProductosList():
     print (f"Instanciado de Individual {i.getProducto()}")
+print(persona3.descuentoProducto(1300))
 
-print(persona3.descuentoProducto(1500))
+empresa = Empresa("laindustria",345789632, 5465)
 
-
-
-
-#persona3 = Individual (20,"persona3","Indi","hola","sebas@gmail.com", 313802, "xra2" )
+print(empresa.getDatos())
+print(isinstance(empresa,Empresa))
+producto = Producto(1014, "Mueble", "Madera", "objeto", 45000)
+empresa.agregarProducto(producto)
+for i in empresa.getProductosList():
+    print (f"Instanciado de Individual {i.getProducto()}")
+print(empresa.descuentoProducto())
