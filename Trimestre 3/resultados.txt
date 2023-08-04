@@ -1,0 +1,9 @@
+.suma de los valores en la columna Resultado ICFES:486
+.mayor valor en la columna Resultado ICFES:91
+.menor valor en la columna Resultado ICFES:6
+.promedio de los valores en la columna Resultado ICFES:60.75
+.pares en la columna Resultado ICFES:[6, 20]
+.impares en la columna Resultado ICFES:[85, 91, 43, 89, 91, 61]
+.media de la columna Resultado ICFES:60.75
+.mediana de la columna Resultado ICFES:73.0
+.moda de la columna Resultado ICFES:91
